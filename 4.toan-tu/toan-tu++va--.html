@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toán tử ++ và toán tử --</title>
+</head>
+<body>
+    <script>
+        // ++ tăng lên 1 đơn vị
+        let a = 1;
+        a++; 
+        console.log(a);
+        
+        let b = 100;
+        b--; 
+        console.log(b);
+
+        let c = 5;
+        console.log(c++);
+        console.log(c);
+
+        let d = 6;
+        console.log(d--);
+        console.log(d);
+
+        let e = 10;
+        console.log(++e);
+        console.log(e);
+
+        let f = 20;
+        console.log(--f);
+        console.log(f);
+
+        /**
+         * Ưu tiên tính toán Prefix Postfix trong js
+         * - Postfix (a++,a--)
+         * - Prefix (++a, --a)
+         * -==================-
+         * Độ ưu tiên 
+         *  + Step 1: Prefix
+         *  + Step 2: Các phép toán còn lại
+         *  + Step 3: Gán giá trị cho biến bên trái dấu =
+         *  + Step 4: Postfix
+         */
+        let number_a = 5;
+        let number_b = 6;
+        
+        let number_z = number_a++ - ++number_b + 1;
+        // number_b = 7, 5 - 7 + 1 = -1 => z = -1
+        // sau đó number_a = 6
+
+        console.log(number_a);
+        console.log(number_b);
+        console.log(number_z);
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+</head>
+<body>
+    <script>
+        // Number, string, boolean, null, undefine, 
+
+        // Number
+        let age = 25;
+        let weight = 95.5;
+        let height = 1.65;
+
+        console.log(age + " "+ typeof(age));
+        console.log(weight +" "+ typeof(weight));
+        console.log(height +" "+ typeof(height));
+
+        // String 
+        let name = "Huỳnh Anh";
+        let jobs = "Developer";
+        let address = "Tây Ninh";
+
+        console.log(name + " " + typeof(name));
+        console.log(jobs + " " + typeof(jobs));
+        console.log(address + " " + typeof(address));
+
+        // Boolearn
+        let boolTrue = true;
+        let boolFasle = false;
+
+        console.log(boolTrue + " " + typeof(boolTrue));
+        console.log(boolFasle + " " + typeof(boolFasle));
+
+        // Null
+        let nullDataType = null;
+
+        console.log(nullDataType + " " + typeof(nullDataType));
+
+        // Undefine
+        let undefineDataType;
+
+        console.log(undefineDataType + " " + typeof(undefineDataType));
+
+
+        // Ép kiểu dữ liệu  
+        let numberA = prompt("Mời nhập vào số a");
+        let numberB = prompt("Mời nhập vào số b");
+        console.log(typeof(numberA) + numberA);
+        console.log(typeof(numberB) + numberB);
+
+        let kq = numberA + numberB;
+        console.log(`kết quả phép tính ${numberA} + ${numberB} = ${kq}`, typeof(kq));
+        console.log("a - b = %s", (numberA - numberB));
+        console.log("a * b = %s", (numberA * numberB));
+        console.log("a / b = %s", (numberA / numberB));
+        console.log("a % b = %s", (numberA % numberB));
+
+        // Ép kiểu số nguyên 
+        let numberC = parseInt(prompt("Mời nhập số c:"));
+        console.log(typeof(numberC) + numberC);
+        
+        // Ép kiểu số thực 
+        let numberD = parseFloat(prompt("Mời nhập số d:"));
+        console.log(typeof(numberD) + numberD);
+
+        // Ép kiểu số tường minh
+        let numberE = Number(prompt("Mời nhập vào số e:"));
+        console.log(typeof(numberE) + numberE);
+        console.log(`Số E vừa nhập vào là: ${numberE}`);
+    </script>
+</body>
+</html>
