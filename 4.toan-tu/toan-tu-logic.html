@@ -4,8 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toán tử Logic</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .tinh-toan{
+          max-width: 1200px;
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .tinh-toan button{
+            width: 500px;
+            padding: 15px;
+            border: none;
+            background-color: rgb(53, 53, 192);
+            color: #ffffff;
+            font-size: 18px;
+            border-radius: 15px;
+            transition: 0.3s linear;
+        }
+        .tinh-toan button:hover{
+            background-color: rgb(156, 42, 16);
+            cursor: pointer;
+        }
+        #so_vua_nhap{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: 15px;
+        }
+        .de-bai{
+            text-align: center;
+            padding: 10px 20px;
+            background-color: rgb(13, 72, 13);
+            color: #ffffff;
+            border-radius: 15px;
+        }   
+        .ket_qua{
+            color: rgb(188, 4, 4);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .text-well-come{
+            color: rgb(13, 72, 13);
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
-<body>  
+<body> 
+    <div class="tinh-toan">
+        <div id="well-come"></div>
+        <div class="item" id="so_vua_nhap"></div>
+        <div class="item">
+            <button onclick="DienTich()">Tính diện tích hình tròn</button> <p class="ket_qua" id="s-hinhtron"></p>
+        </div>
+        <div class="item">
+            <button onclick="ChuVi()">Tính chu vi hình tròn</button> <p class="ket_qua" id="p-hinhtron"></p>
+        </div>
+        <div class="item">
+            <button onclick="dienTichHCN()">Tính diện tích HCN</button> <p class="ket_qua" id="s-hcn"></p>
+        </div>
+        <div class="item">
+            <button onclick="chuViHCN()">Tính chu vi HCN</button> <p class="ket_qua" id="p-hcn"></p>
+        </div>
+        <div class="item">
+            <button onclick="diemTB()">Điểm trung bình Toán, Văn, Anh</button> <p class="ket_qua" id="dtb"></p>
+        </div>
+        <button onclick="location.reload()">Reset</button>
+    </div>
+    
     <script>
         /**
          * Toán tử logic gồm
@@ -13,7 +94,33 @@
          * kết q
          */
 
+         // Kiểm tra &&
+         let a = 5;
+         console.log(a>2 && a<10);
+         console.log(a>6 && a >8);
          
+         // Kiểm tra ||
+         console.log(a> 2 || a < 10);
+         console.log(a> 6 || a >4);
+
+         // Kiểm tra !
+         console.log(a != 4);
+         console.log(a != 5);
+
+
+         // Toán tư này dùng cho câu điều kiện of else và toán tử 3 ngôi
+
+         //VD kiểm tra xem người dùng có đủ 18 tuổi hay không 
+         let oldUser = Number(prompt("Mời nhập tuổi đế kiểm tra"));
+         if(oldUser >= 18){
+            const a = document.getElementById('well-come');
+            a.innerHTML = `
+                <h1 class="text-well-come">Chào mừng đến với trang tính toán của chúng tôi </h1>
+            `
+         }else{
+            window.location = "https://www.youtube.com/watch?v=550GM1sk6wE";
+         }
     </script>
+    <script src="bt-toan-tu-logic.js"></script>
 </body>
 </html>
